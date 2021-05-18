@@ -1,3 +1,4 @@
+package algorithm.dp;
 import java.util.Scanner;
 
 class Pair<T1, T2> {

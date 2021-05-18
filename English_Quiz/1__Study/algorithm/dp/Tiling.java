@@ -1,7 +1,8 @@
+package algorithm.dp;
 import java.util.Scanner;
 
 
-public class Main {
+public class Tiling {
     int n;
     int []caseNum = new int[1001];
 
@@ -15,7 +16,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Main t = new Main();
+        Tiling t = new Tiling();
 
         Scanner sc = new Scanner(System.in);
         t.n = sc.nextInt();

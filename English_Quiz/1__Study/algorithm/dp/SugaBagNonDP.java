@@ -1,12 +1,15 @@
+package algorithm.dp;
 import java.util.Scanner;
 
 public class SugaBagNonDP {
     public static void main(String[] args) {
         int n, count = 0;
 
-        Scanner sc = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
-        n = sc.nextInt();
+        n = scan.nextInt();
+
+        scan.close();
 
         while(true){
             if(n < 0) {
@@ -21,8 +24,5 @@ public class SugaBagNonDP {
             count++;
         }
         System.out.println(count);
-
-        sc.close();
-         
     }
 }
