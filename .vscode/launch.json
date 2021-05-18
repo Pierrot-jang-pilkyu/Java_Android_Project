@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "Java_Android_Project_981add0c"
+        },
+        {
+            "type": "java",
+            "name": "Launch StreamTest",
+            "request": "launch",
+            "mainClass": "StreamTest",
+            "projectName": "Java_Android_Project_981add0c"
+        },
+        {
+            "type": "java",
             "name": "Launch Tiling",
             "request": "launch",
             "mainClass": "Tiling",
