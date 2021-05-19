@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch SugaBag",
+            "request": "launch",
+            "mainClass": "algorithm.dp.SugaBag",
+            "projectName": "Java_Android_Project_981add0c"
+        },
+        {
+            "type": "java",
+            "name": "Launch Tiling",
+            "request": "launch",
+            "mainClass": "algorithm.dp.Tiling",
+            "projectName": "Java_Android_Project_981add0c"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "algorithm.dp.Main",
+            "projectName": "Java_Android_Project_981add0c"
+        },
+        {
+            "type": "java",
             "name": "Launch Main",
             "request": "launch",
             "mainClass": "algorithm.bruteforce.Main",
