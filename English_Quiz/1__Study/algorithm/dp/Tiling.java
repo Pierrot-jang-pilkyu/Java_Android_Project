@@ -3,26 +3,45 @@ import java.util.Scanner;
 
 
 public class Tiling {
-    int n;
-    int []caseNum = new int[1001];
+    static int N_MAX = 1001;
+    static int N, result;
+    static int []caseNum = new int[N_MAX];
 
-    int tiling(int n) {
-        if(n == 1) return caseNum[n] = 1;
-        if(n == 2) return caseNum[n] = 2;
+    static void Input(){
+        Scanner sc = new Scanner(System.in);
+        
+        N = sc.nextInt();
 
-        if(caseNum[n] != 0) return caseNum[n];
+        sc.close();
 
-        return caseNum[n] = ((tiling(n - 1) + tiling(n - 2)) % 10007);
+        caseNum[0] = 0;
+        caseNum[1] = 1;
+        caseNum[2] = 2;
+    }
+
+    static void Solution() {
+
+        for(int i = 3; i <= N; i++){
+
+            caseNum[i] = caseNum[i - 1] + caseNum[i - 2];
+
+        }
+        result = caseNum[N];
+
+        System.out.println(result);
+    }
+
+    static void Solve(){
+
+        Input();
+
+        Solution();
+
     }
 
     public static void main(String[] args) {
-        Tiling t = new Tiling();
 
-        Scanner sc = new Scanner(System.in);
-        t.n = sc.nextInt();
+        Solve();
         
-        System.out.println(t.tiling(t.n));
-        
-        sc.close();
     }
 }

@@ -1,7 +1,7 @@
 package algorithm.bruteforce;
 import java.util.Scanner;
 
-public class Main {
+public class Hansu {
     static int count = 0;
 
 
