@@ -23,11 +23,7 @@ public class Tiling {
 
         for(int i = 3; i <= N; i++){
 
-<<<<<<< HEAD
             caseNum[i] = ((caseNum[i - 1] + caseNum[i - 2]) % 10007);
-=======
-            caseNum[i] = caseNum[i - 1] + caseNum[i - 2];
->>>>>>> 5419b64f74f752cc97cc68dc1a64efe1f52f6798
 
         }
         result = caseNum[N];
