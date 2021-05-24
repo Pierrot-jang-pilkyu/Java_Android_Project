@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MaxPrice",
+            "request": "launch",
+            "mainClass": "algorithm.dp.MaxPrice",
+            "projectName": "Java_Android_Project_981add0c"
+        },
+        {
+            "type": "java",
             "name": "Launch SugaBag",
             "request": "launch",
             "mainClass": "algorithm.dp.SugaBag",
