@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "BeakJun_example.Main",
+            "projectName": "Java_Android_Project_981add0c"
+        },
+        {
+            "type": "java",
             "name": "Launch MaxPrice",
             "request": "launch",
             "mainClass": "algorithm.dp.MaxPrice",
