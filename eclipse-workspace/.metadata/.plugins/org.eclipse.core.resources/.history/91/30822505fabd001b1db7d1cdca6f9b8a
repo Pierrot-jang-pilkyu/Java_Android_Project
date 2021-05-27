@@ -1,0 +1,77 @@
+//package BeakJun_example;
+
+import java.io.*;
+import java.util.ArrayList;
+import java.util.StringTokenizer;
+
+public class Main {
+    static ArrayList<String> check = new ArrayList<String>();
+    static String []cp = {"c=", "c-", "dz=", "d-", "lj", "nj", "s=", "z="};
+    static int result = 0;
+
+    static void Input() throws IOException{
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        
+        StringTokenizer st = new StringTokenizer(br.readLine());
+
+        while(st.hasMoreTokens()) check.add(st.nextToken());
+
+        br.close();
+
+    }
+
+    static void Solution() throws IOException{
+
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        result = check.get(0).length();
+        
+        int i;
+        for(i = 0; i < check.get(0).length() - 2; i++){
+
+            for(int j = 0; j < 8; j++){
+
+                if(check.get(0).substring(i, i + 2).compareToIgnoreCase(cp[j]) == 0) { 
+                    result -= 1; 
+                    if(i < check.get(0).length() - 3) i++;
+                    break;
+                }
+                else if(check.get(0).substring(i, i + 3).compareToIgnoreCase(cp[j]) == 0) {
+                    result -= 2;
+                    if(i < check.get(0).length() - 4) i += 2;
+                    break; 
+                }
+                
+            }
+
+        }
+
+        for(int j = 0; j < 8; j++){
+
+            if(check.get(0).substring(i, i + 2).compareToIgnoreCase(cp[j]) == 0) { result -= 1; break; }
+            
+        }
+        
+
+        bw.write(result + "\n");
+
+        bw.flush();
+        bw.close();
+
+    }
+
+    static void Solve() throws IOException{
+
+        Input();
+
+        Solution();
+
+    }
+
+    public static void main(String[] args) throws IOException{
+        
+        Solve();
+
+    }
+}

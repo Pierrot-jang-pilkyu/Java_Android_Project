@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch AsciiChar",
+            "request": "launch",
+            "mainClass": "BeakJun_example.AsciiChar",
+            "projectName": "Java_Android_Project_981add0c"
+        },
+        {
+            "type": "java",
+            "name": "Launch Test",
+            "request": "launch",
+            "mainClass": "BeakJun_example.Test",
+            "projectName": "Java_Android_Project_981add0c"
+        },
+        {
+            "type": "java",
             "name": "Launch Main",
             "request": "launch",
             "mainClass": "BeakJun_example.Main",
