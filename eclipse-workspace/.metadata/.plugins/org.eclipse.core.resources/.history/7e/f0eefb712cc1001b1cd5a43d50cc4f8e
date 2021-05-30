@@ -1,0 +1,76 @@
+
+
+import java.io.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.StringTokenizer;
+
+public class Main {
+    static ArrayList<Integer> A = new ArrayList<Integer>();
+    static ArrayList<Integer> B = new ArrayList<Integer>();
+    static ArrayList<Integer> C = new ArrayList<Integer>();
+    static HashMap<Integer, Integer> side = new HashMap<Integer, Integer>();
+
+    static void Input() throws IOException{
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        String input = "1";
+
+        while(input.charAt(0) != '0'){
+
+            input = br.readLine();
+
+            StringTokenizer st = new StringTokenizer(input);
+
+            A.add(Integer.parseInt(st.nextToken()));
+            B.add(Integer.parseInt(st.nextToken()));
+            C.add(Integer.parseInt(st.nextToken()));
+
+        }
+
+        br.close();
+
+    }
+
+    static void Solution() throws IOException{
+
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        boolean []result = new boolean[A.size() + 1];
+        
+        for(int i = 0; i < A.size(); i++){
+
+            if(Math.pow(C.get(i), 2) == (Math.pow(A.get(i), 2) + Math.pow(B.get(i), 2)))
+                result[i + 1] = true;
+            
+            side.clear();
+
+        }
+
+        for(int i = 1; i < A.size(); i++){
+
+            if(result[i]) bw.write("right" + "\n");
+            else bw.write("wrong" + "\n");
+
+        }
+
+        bw.flush();
+        bw.close();
+
+    }
+    
+    static void Solve() throws IOException{
+
+        Input();
+
+        Solution();
+
+    }
+
+    public static void main(String[] args) throws IOException{
+        
+        Solve();
+
+    }
+}

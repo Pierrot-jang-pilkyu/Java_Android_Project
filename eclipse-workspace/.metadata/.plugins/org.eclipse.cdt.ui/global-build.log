@@ -1,0 +1,144 @@
+17:46:22 **** Rebuild of configuration Debug for project BeakJun_Study ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "네이버 문제.o" "..\\네이버 문제.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o 워프.o "..\\워프.cpp" 
+..\워프.cpp: In function 'void Solution()':
+..\워프.cpp:44:9: warning: variable 'now' set but not used [-Wunused-but-set-variable]
+   44 |     int now;
+      |         ^~~
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o rgb문제.o "..\\rgb문제.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "pair test.o" "..\\pair test.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "포도주 최대값.o" "..\\포도주 최대값.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "양의 정수 분할 알고리즘 (재귀).o" "..\\양의 정수 분할 알고리즘 (재귀).cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o bubblesort.o "..\\bubblesort.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "설탕봉지 동적 프로그래밍.o" "..\\설탕봉지 동적 프로그래밍.cpp" 
+g++ -o BeakJun_Study.exe bubblesort.o "pair test.o" rgb문제.o "네이버 문제.o" "설탕봉지 동적 프로그래밍.o" "양의 정수 분할 알고리즘 (재귀).o" 워프.o "포도주 최대값.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: pair test.o: in function `ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_':
+C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../pair test.cpp:8: multiple definition of `main'; bubblesort.o:C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../bubblesort.cpp:29: first defined here
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: rgb문제.o: in function `main':
+C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../rgb문제.cpp:50: multiple definition of `main'; bubblesort.o:C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../bubblesort.cpp:29: first defined here
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: 네이버 문제.o: in function `ZSt7forwardIRKiEOT_RNSt16remove_referenceIS2_E4typeE':
+C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../네이버 문제.cpp:9: multiple definition of `main'; bubblesort.o:C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../bubblesort.cpp:29: first defined here
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: 설탕봉지 동적 프로그래밍.o: in function `main':
+C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../설탕봉지 동적 프로그래밍.cpp:30: multiple definition of `main'; bubblesort.o:C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../bubblesort.cpp:29: first defined here
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: 설탕봉지 동적 프로그래밍.o:설탕봉지 동적 프로그래밍.cpp:(.bss+0x0): multiple definition of `result'; rgb문제.o:rgb문제.cpp:(.bss+0x4): first defined here
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: 양의 정수 분할 알고리즘 (재귀).o: in function `main':
+C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../양의 정수 분할 알고리즘 (재귀).cpp:65: multiple definition of `main'; bubblesort.o:C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../bubblesort.cpp:29: first defined here
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: 워프.o: in function `Z5Inputv':
+C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../워프.cpp:28: multiple definition of `Input()'; rgb문제.o:C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../rgb문제.cpp:19: first defined here
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: 워프.o: in function `Z8Solutionv':
+C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../워프.cpp:40: multiple definition of `Solution()'; rgb문제.o:C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../rgb문제.cpp:29: first defined here
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: 워프.o: in function `Z5Solvev':
+C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../워프.cpp:64: multiple definition of `Solve()'; rgb문제.o:C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../rgb문제.cpp:44: first defined here
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: 워프.o: in function `main':
+C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../워프.cpp:72: multiple definition of `main'; bubblesort.o:C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../bubblesort.cpp:29: first defined here
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: 워프.o:워프.cpp:(.bss+0x0): multiple definition of `N'; rgb문제.o:rgb문제.cpp:(.bss+0x0): first defined here
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: 포도주 최대값.o: in function `Z5Inputv':
+C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../포도주 최대값.cpp:12: multiple definition of `Input()'; rgb문제.o:C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../rgb문제.cpp:19: first defined here
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: 포도주 최대값.o: in function `Z8Solutionv':
+C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../포도주 최대값.cpp:24: multiple definition of `Solution()'; rgb문제.o:C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../rgb문제.cpp:29: first defined here
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: 포도주 최대값.o: in function `Z5Solvev':
+C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../포도주 최대값.cpp:44: multiple definition of `Solve()'; rgb문제.o:C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../rgb문제.cpp:44: first defined here
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: 포도주 최대값.o: in function `main':
+C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../포도주 최대값.cpp:52: multiple definition of `main'; bubblesort.o:C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../bubblesort.cpp:29: first defined here
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: 포도주 최대값.o:포도주 최대값.cpp:(.bss+0x0): multiple definition of `N'; rgb문제.o:rgb문제.cpp:(.bss+0x0): first defined here
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: 포도주 최대값.o:포도주 최대값.cpp:(.bss+0x4): multiple definition of `result'; rgb문제.o:rgb문제.cpp:(.bss+0x4): first defined here
+collect2.exe: error: ld returned 1 exit status
+17:47:45 **** Incremental Build of configuration Debug for project BeakJun_Study ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o 워프.o "..\\워프.cpp" 
+g++ -o BeakJun_Study.exe bubblesort.o "pair test.o" rgb문제.o "네이버 문제.o" "설탕봉지 동적 프로그래밍.o" "양의 정수 분할 알고리즘 (재귀).o" 워프.o "포도주 최대값.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: pair test.o: in function `ZSt4moveIRiEONSt16remove_referenceIT_E4typeEOS2_':
+C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../pair test.cpp:8: multiple definition of `main'; bubblesort.o:C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../bubblesort.cpp:29: first defined here
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: rgb문제.o: in function `main':
+C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../rgb문제.cpp:50: multiple definition of `main'; bubblesort.o:C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../bubblesort.cpp:29: first defined here
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: 네이버 문제.o: in function `ZnwjPv':
+C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../네이버 문제.cpp:9: multiple definition of `main'; bubblesort.o:C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../bubblesort.cpp:29: first defined here
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: 설탕봉지 동적 프로그래밍.o: in function `main':
+C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../설탕봉지 동적 프로그래밍.cpp:30: multiple definition of `main'; bubblesort.o:C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../bubblesort.cpp:29: first defined here
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: 설탕봉지 동적 프로그래밍.o:설탕봉지 동적 프로그래밍.cpp:(.bss+0x0): multiple definition of `result'; rgb문제.o:rgb문제.cpp:(.bss+0x4): first defined here
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: 양의 정수 분할 알고리즘 (재귀).o: in function `main':
+C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../양의 정수 분할 알고리즘 (재귀).cpp:65: multiple definition of `main'; bubblesort.o:C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../bubblesort.cpp:29: first defined here
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: 워프.o: in function `Z5Inputv':
+C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../워프.cpp:28: multiple definition of `Input()'; rgb문제.o:C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../rgb문제.cpp:19: first defined here
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: 워프.o: in function `Z8Solutionv':
+C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../워프.cpp:40: multiple definition of `Solution()'; rgb문제.o:C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../rgb문제.cpp:29: first defined here
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: 워프.o: in function `Z5Solvev':
+C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../워프.cpp:64: multiple definition of `Solve()'; rgb문제.o:C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../rgb문제.cpp:44: first defined here
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: 워프.o: in function `main':
+C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../워프.cpp:72: multiple definition of `main'; bubblesort.o:C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../bubblesort.cpp:29: first defined here
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: 워프.o:워프.cpp:(.bss+0x0): multiple definition of `N'; rgb문제.o:rgb문제.cpp:(.bss+0x0): first defined here
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: 포도주 최대값.o: in function `Z5Inputv':
+C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../포도주 최대값.cpp:12: multiple definition of `Input()'; rgb문제.o:C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../rgb문제.cpp:19: first defined here
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: 포도주 최대값.o: in function `Z8Solutionv':
+C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../포도주 최대값.cpp:24: multiple definition of `Solution()'; rgb문제.o:C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../rgb문제.cpp:29: first defined here
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: 포도주 최대값.o: in function `Z5Solvev':
+C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../포도주 최대값.cpp:44: multiple definition of `Solve()'; rgb문제.o:C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../rgb문제.cpp:44: first defined here
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: 포도주 최대값.o: in function `main':
+C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../포도주 최대값.cpp:52: multiple definition of `main'; bubblesort.o:C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\2. algorithm\Debug/../bubblesort.cpp:29: first defined here
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: 포도주 최대값.o:포도주 최대값.cpp:(.bss+0x0): multiple definition of `N'; rgb문제.o:rgb문제.cpp:(.bss+0x0): first defined here
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: 포도주 최대값.o:포도주 최대값.cpp:(.bss+0x4): multiple definition of `result'; rgb문제.o:rgb문제.cpp:(.bss+0x4): first defined here
+collect2.exe: error: ld returned 1 exit status
+17:52:22 **** Rebuild of configuration Debug for project BeakJun_Study ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o 워프.o "..\\워프.cpp" 
+g++ -o BeakJun_Study.exe 워프.o 
+Info: Nothing to build for BeakJun_Study
+Info: Nothing to build for BeakJun_Study
+Info: Nothing to build for BeakJun_Study
+Info: Nothing to build for BeakJun_Study
+17:53:42 **** Incremental Build of configuration Debug for project BeakJun_Study ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o primenumber.o "..\\primenumber.cpp" 
+g++ -o BeakJun_Study.exe primenumber.o 워프.o 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: 워프.o: in function `Z3gcdii':
+C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\BeakJun_Study\Debug/../워프.cpp:13: multiple definition of `gcd(int, int)'; primenumber.o:C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\BeakJun_Study\Debug/../primenumber.cpp:13: first defined here
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: 워프.o: in function `Z5Inputv':
+C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\BeakJun_Study\Debug/../워프.cpp:28: multiple definition of `Input()'; primenumber.o:C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\BeakJun_Study\Debug/../primenumber.cpp:28: first defined here
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: 워프.o: in function `Z8Solutionv':
+C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\BeakJun_Study\Debug/../워프.cpp:40: multiple definition of `Solution()'; primenumber.o:C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\BeakJun_Study\Debug/../primenumber.cpp:40: first defined here
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: 워프.o: in function `Z5Solvev':
+C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\BeakJun_Study\Debug/../워프.cpp:64: multiple definition of `Solve()'; primenumber.o:C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\BeakJun_Study\Debug/../primenumber.cpp:64: first defined here
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: 워프.o: in function `main':
+C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\BeakJun_Study\Debug/../워프.cpp:72: multiple definition of `main'; primenumber.o:C:\Users\Pierrot\Desktop\Programing\Dev C++\Project\2.C++ 공부\BeakJun_Study\Debug/../primenumber.cpp:72: first defined here
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: 워프.o:워프.cpp:(.bss+0x0): multiple definition of `N'; primenumber.o:primenumber.cpp:(.bss+0x0): first defined here
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: 워프.o:워프.cpp:(.bss+0x20): multiple definition of `P'; primenumber.o:primenumber.cpp:(.bss+0x20): first defined here
+collect2.exe: error: ld returned 1 exit status
+17:54:07 **** Incremental Build of configuration Debug for project BeakJun_Study ****
+Info: Internal Builder is used for build
+g++ -o BeakJun_Study.exe primenumber.o 
+Info: Nothing to build for BeakJun_Study
+Info: Nothing to build for BeakJun_Study
+Info: Nothing to build for BeakJun_Study
+Info: Nothing to build for BeakJun_Study
+Info: Nothing to build for BeakJun_Study
+Info: Nothing to build for BeakJun_Study
+Info: Nothing to build for BeakJun_Study
+Info: Nothing to build for BeakJun_Study
+Info: Nothing to build for BeakJun_Study
+Info: Nothing to build for BeakJun_Study
+Info: Nothing to build for BeakJun_Study
+Info: Nothing to build for BeakJun_Study
+Info: Nothing to build for BeakJun_Study
+Info: Nothing to build for BeakJun_Study
+18:04:44 **** Incremental Build of configuration Debug for project BeakJun_Study ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o primenumber.o "..\\primenumber.cpp" 
+..\primenumber.cpp: In function 'void Solution()':
+..\primenumber.cpp:44:9: warning: variable 'now' set but not used [-Wunused-but-set-variable]
+   44 |     int now;
+      |         ^~~
+g++ -o BeakJun_Study.exe primenumber.o 
+Info: Nothing to build for BeakJun_Study
+Info: Nothing to build for BeakJun_Study
+Info: Nothing to build for BeakJun_Study
+Info: Nothing to build for BeakJun_Study
+Info: Nothing to build for BeakJun_Study
+Info: Nothing to build for BeakJun_Study
+Info: Nothing to build for BeakJun_Study
+Info: Nothing to build for BeakJun_Study
+18:17:46 **** Incremental Build of configuration Debug for project BeakJun_Study ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o primenumber.o "..\\primenumber.cpp" 
+g++ -o BeakJun_Study.exe primenumber.o 
+Info: Nothing to build for BeakJun_Study

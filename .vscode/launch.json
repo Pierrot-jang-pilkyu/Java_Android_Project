@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch TwoPointAndPoint",
+            "request": "launch",
+            "mainClass": "BeakJun_example.TwoPointAndPoint",
+            "projectName": "Java_Android_Project_981add0c"
+        },
+        {
+            "type": "java",
+            "name": "Launch TexiGeometry",
+            "request": "launch",
+            "mainClass": "BeakJun_example.TexiGeometry",
+            "projectName": "Java_Android_Project_981add0c"
+        },
+        {
+            "type": "java",
+            "name": "Launch RightTriangle",
+            "request": "launch",
+            "mainClass": "BeakJun_example.RightTriangle",
+            "projectName": "Java_Android_Project_981add0c"
+        },
+        {
+            "type": "java",
+            "name": "Launch GoldBach",
+            "request": "launch",
+            "mainClass": "BeakJun_example.GoldBach",
+            "projectName": "Java_Android_Project_981add0c"
+        },
+        {
+            "type": "java",
+            "name": "Launch Eratos",
+            "request": "launch",
+            "mainClass": "BeakJun_example.Eratos",
+            "projectName": "Java_Android_Project_981add0c"
+        },
+        {
+            "type": "java",
             "name": "Launch AsciiChar",
             "request": "launch",
             "mainClass": "BeakJun_example.AsciiChar",

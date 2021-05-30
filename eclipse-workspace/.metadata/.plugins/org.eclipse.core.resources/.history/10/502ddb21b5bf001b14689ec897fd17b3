@@ -1,0 +1,127 @@
+package BeakJun_example;
+
+import java.io.*;
+import java.util.ArrayList;
+import java.util.StringTokenizer;
+
+public class Main {
+    static int T;
+    static int []X;
+    static int []Y;
+    static int []gap;
+    static int []result;
+
+    static void Input() throws IOException{
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        T = Integer.parseInt(br.readLine());
+
+        X = new int[T + 1];
+        Y = new int[T + 1];
+        gap = new int[T + 1];
+        
+        for(int i = 1; i <= T; i++){
+
+            StringTokenizer st = new StringTokenizer(br.readLine());
+
+            X[i] = Integer.parseInt(st.nextToken());
+            Y[i] = Integer.parseInt(st.nextToken());
+
+        }
+
+        br.close();
+    
+    }
+
+    static ArrayList<Integer> copyArrayList(ArrayList<Integer> source, ArrayList<Integer> destination){
+    	
+    	destination.clear();
+        for(int i = 0; i < source.size(); i++) 
+            destination.add(source.get(i));
+
+        return destination;
+
+    }
+
+    static void minWarps(int gap, int _i, ArrayList<Integer> _K){
+
+        if(gap < 0) return;
+        if(gap == 0) { 
+            result[_i] = Math.min(result[_i], _K.size() - 1);
+            _K.clear(); return;
+        }
+        if(gap == 1){
+            if(_K.get(_K.size() - 1) == 1 || _K.get(_K.size() - 1) == 2) {
+                _K.add(1);
+                minWarps(gap - 1, _i, _K);
+            }
+            return;
+        }
+
+        ArrayList<Integer> temp = new ArrayList<Integer>();
+
+        temp = copyArrayList(_K, temp);
+
+        _K.add(_K.get(_K.size() - 1) - 1);
+        if(_K.get(_K.size() - 1) != 0)
+        	minWarps(gap - _K.get(_K.size() - 1), _i, _K);
+        _K = copyArrayList(temp, _K);
+
+        _K.add(_K.get(_K.size() - 1));
+        minWarps(gap - _K.get(_K.size() - 1), _i, _K);
+        _K = copyArrayList(temp, _K);
+        
+        _K.add(_K.get(_K.size() - 1) + 1);
+        minWarps(gap - _K.get(_K.size() - 1), _i, _K);
+
+    }
+
+    static void Solution() throws IOException{
+
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        ArrayList<Integer> K = new ArrayList<Integer>();
+        int max = 0;
+        result = new int[T + 1];
+
+        for(int i = 1; i <= T; i++){
+
+            gap[i] = Y[i] - X[i];
+            max = Math.max(max, gap[i]);
+
+        }
+
+        K.add(0); K.add(1);
+
+        for(int i = 1; i <= T; i++){
+
+            minWarps(gap[i], 2, K);
+
+        }
+
+        for(int i = 1; i <= T; i++){
+
+            bw.write(result[i] + "\n");
+
+        }
+
+        bw.flush();
+        bw.close();
+
+    }
+
+    static void Solve() throws IOException{
+
+        Input();
+
+        Solution();
+
+    }
+
+    public static void main(String[] args) throws IOException{
+        
+        Solve();
+
+    }
+}

@@ -1,0 +1,83 @@
+//package BeakJun_example;
+
+import java.io.*;
+import java.util.ArrayList;
+import java.util.StringTokenizer;
+
+public class Main {
+    static int T;
+    static int []X;
+    static int []Y;
+    static int []gap;
+    static int []result;
+
+    static void Input() throws IOException{
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        T = Integer.parseInt(br.readLine());
+
+        X = new int[T + 1];
+        Y = new int[T + 1];
+        gap = new int[T + 1];
+        
+        for(int i = 1; i <= T; i++){
+
+            StringTokenizer st = new StringTokenizer(br.readLine());
+
+            X[i] = Integer.parseInt(st.nextToken());
+            Y[i] = Integer.parseInt(st.nextToken());
+
+        }
+
+        br.close();
+    
+    }
+
+    static void Solution() throws IOException{
+
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        ArrayList<Integer> K = new ArrayList<Integer>();
+        result = new int[T + 1];
+
+        for(int i = 1; i <= T; i++){
+
+            gap[i] = Y[i] - X[i];
+            result[i] = Integer.MAX_VALUE;
+
+        }
+
+        K.add(0); K.add(1);
+
+        for(int i = 1; i <= T; i++){
+
+            minWarps(gap[i] - 1, i, K);
+
+        }
+
+        for(int i = 1; i <= T; i++){
+
+            bw.write(result[i] + "\n");
+
+        }
+
+        bw.flush();
+        bw.close();
+
+    }
+
+    static void Solve() throws IOException{
+
+        Input();
+
+        Solution();
+
+    }
+
+    public static void main(String[] args) throws IOException{
+        
+        Solve();
+
+    }
+}

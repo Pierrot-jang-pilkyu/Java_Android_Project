@@ -1,0 +1,152 @@
+
+
+import java.io.*;
+import java.util.ArrayList;
+
+
+public class Main { 
+    static int T;
+    static ArrayList<Integer> N = new ArrayList<Integer>();
+    static boolean []primeArray;
+    static ArrayList<Integer> primeNumber = new ArrayList<Integer>();
+    static String []result;
+
+    static void Input() throws IOException{
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        T = Integer.parseInt(br.readLine());
+
+        N.add(-1);
+        int max = 0;
+
+        result = new String[T + 1];
+
+        for(int i = 1; i <= T; i++){
+
+            N.add(Integer.parseInt(br.readLine()));
+            max = Math.max(max, N.get(i));
+
+        }
+
+        primeArray = new boolean[10001];
+
+        br.close();
+
+    }
+
+    static void Eratosfunc(int n){
+
+        if(n <= 1) return;
+
+        for(int i = 0; i < 2; i++){
+
+            primeArray[i] = false;
+
+        }
+
+        for(int i = 2; i <= n; i++){
+
+            primeArray[i] = true;
+
+        }
+
+        for(int i = 2; i * i <= n; i++){
+            
+            if(primeArray[i])
+                for(int j = i * i; j <= n; j += i)
+                    primeArray[j] = false;
+
+        }
+
+    }
+
+    static void Solution() throws IOException{
+
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        int n = 10000, min = 10000;
+        int []sum = new int[3];
+        ArrayList<String> partition = new ArrayList<String>();
+
+        Eratosfunc(n);
+
+        for(int i = 1; i <= n; i++){
+
+            if(primeArray[i])
+                primeNumber.add(i);
+
+        }
+
+        
+
+        for(int i = 1; i <= T; i++){
+
+            for(int j = 1; j < primeNumber.size(); j++){
+            	
+            	if(primeNumber.get(j) > N.get(i)) break;
+
+                sum[1] = primeNumber.get(j);
+
+                for(int k = 1; k < primeNumber.size(); k++){
+                	
+                	if(primeNumber.get(k) > N.get(i)) break;
+
+                    sum[2] = primeNumber.get(k);
+
+                    if(N.get(i) == (sum[1] + sum[2])) break;
+
+                    sum[2] = 0;
+
+                }
+
+                if(sum[2] != 0){
+                    if(min >= Math.abs(sum[1] - sum[2])){
+
+                        min = Math.abs(sum[1] - sum[2]);
+
+                        if(sum[1] <= sum[2])
+                            partition.add(Integer.toString(sum[1]) + " " + Integer.toString(sum[2]));
+
+                    }
+
+                }
+
+            }
+
+            if(!partition.isEmpty()){
+
+                result[i] = partition.get(partition.size() - 1);
+                partition.clear();
+
+            }
+
+        }
+
+        for(int i = 1; i <= T; i++){
+
+            bw.write(result[i] + "\n");
+
+        }
+    
+        bw.flush();
+        bw.close();
+
+    }
+
+    static void Solve() throws IOException{
+
+        Input();
+
+        Solution();
+
+
+    }
+    
+    public static void main(String[] args) throws IOException{
+        
+        Solve();
+
+    }
+}
+
