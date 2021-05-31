@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch RecursionPrint",
+            "request": "launch",
+            "mainClass": "BeakJun_example.RecursionPrint",
+            "projectName": "Java_Android_Project_981add0c"
+        },
+        {
+            "type": "java",
+            "name": "Launch Fibonacci_recursion",
+            "request": "launch",
+            "mainClass": "BeakJun_example.Math.Fibonacci_recursion",
+            "projectName": "Java_Android_Project_981add0c"
+        },
+        {
+            "type": "java",
+            "name": "Launch Factorial",
+            "request": "launch",
+            "mainClass": "BeakJun_example.Math.Factorial",
+            "projectName": "Java_Android_Project_981add0c"
+        },
+        {
+            "type": "java",
             "name": "Launch TwoPointAndPoint",
             "request": "launch",
             "mainClass": "BeakJun_example.TwoPointAndPoint",
